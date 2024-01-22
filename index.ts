@@ -6,7 +6,7 @@ const crypto = require('crypto');
 
 const store = new SessionStore();
 const httpServer = createServer();
-
+const port = process.env.PORT || 4000;
 const io = new Server(httpServer, {
     cors: {
         origin: ['http://localhost:3000', 'https://admin.socket.io'],
@@ -89,4 +89,4 @@ io.on('connection', (socket: any) => {
 
 
 
-httpServer.listen(3001);
+httpServer.listen(port);

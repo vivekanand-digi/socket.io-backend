@@ -9,10 +9,9 @@ const httpServer = createServer();
 const port = process.env.PORT || 4000;
 const io = new Server(httpServer, {
     cors: {
-        origin: ['http://localhost:3000', 'https://admin.socket.io'],
+origin: ['https://socket-io-kzl8x9aio-vivekananda-digi.vercel.app/', 'https://admin.socket.io'],
     }
-});
-
+});      
 instrument(io, {
     auth: false,
     mode: "development",
